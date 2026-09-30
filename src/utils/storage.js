@@ -11,15 +11,15 @@ export const getTasks = () => {
   try {
     const rawData = localStorage.getItem(STORAGE_KEY);
     if (!rawData) {
-      // First visit: initialize with curated sample tasks
-      saveTasks(sampleTasks);
-      return sampleTasks;
+      // First visit: initialize with an empty array
+      saveTasks([]);
+      return [];
     }
     const parsed = JSON.parse(rawData);
-    return Array.isArray(parsed) ? parsed : sampleTasks;
+    return Array.isArray(parsed) ? parsed : [];
   } catch (error) {
     console.error("Failed to read tasks from LocalStorage:", error);
-    return sampleTasks;
+    return [];
   }
 };
 
