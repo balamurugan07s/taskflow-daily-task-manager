@@ -1,0 +1,231 @@
+/* ==========================================================================
+   TaskFlow Design System
+   Light Theme: Editorial Vintage "Ledger" Paper & Forest Green
+   Dark Theme: Modern Sleek Indigo & Deep Slate Tech
+   ========================================================================== */
+
+:root {
+  /* Fonts */
+  --font-serif: 'Newsreader', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Newsreader', Georgia, serif;
+  --font-mono: 'Space Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Color Palette - Vintage Ledger Forest Green */
+  --primary-50: #EBF3EE;
+  --primary-100: #D8E7DD;
+  --primary-200: #B2D1BD;
+  --primary-500: #386B52;
+  --primary-600: #28533D; /* Signature deep forest green from Ledger */
+  --primary-700: #1E3F2E;
+  --primary-gradient: linear-gradient(135deg, #28533D 0%, #34634B 100%);
+  --primary-light-gradient: linear-gradient(135deg, #EBF3EE 0%, #F5F8F6 100%);
+
+  /* Neutrals & Paper Surfaces (Light Mode) */
+  --bg-app: #F7F5EE; /* Warm vintage ivory/paper cream */
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-muted: #EFECE3; /* Vintage pill background from Ledger */
+  --border-subtle: #DDD6C7; /* Soft sand border */
+  --border-strong: #C5BCAB;
+  --border-ledger-dashed: 2px dashed #93AA9E; /* Signature dashed ledger accent */
+
+  /* Input fields specific */
+  --bg-input: #F3EFE6;
+  --border-input: #DDD6C7;
+
+  /* Typography Colors */
+  --text-primary: #1C2621; /* Soft vintage deep charcoal */
+  --text-secondary: #48574F;
+  --text-muted: #72847A;
+  --text-inverse: #FFFFFF;
+
+  /* Status Colors (Vintage Editorial Tones) */
+  --color-success: #28533D;
+  --color-success-bg: #EBF3EE;
+  --color-success-border: #B2D1BD;
+
+  --color-warning: #A26815;
+  --color-warning-bg: #FBF3E6;
+  --color-warning-border: #F1D8B4;
+
+  --color-info: #2B5876;
+  --color-info-bg: #EAF2F7;
+  --color-info-border: #BBD6E7;
+
+  --color-danger: #A33333;
+  --color-danger-bg: #FBEAEA;
+  --color-danger-border: #F0BCBC;
+
+  /* Priority Colors (Vintage Ledger Tones) */
+  --priority-urgent: #A33333;
+  --priority-urgent-bg: #FBEAEA;
+  --priority-high: #BA5424;
+  --priority-high-bg: #FAEDE6;
+  --priority-medium: #986A1B;
+  --priority-medium-bg: #FAF3E8;
+  --priority-low: #5B6B63;
+  --priority-low-bg: #EDEFEA;
+
+  /* Shadows (Subtle, paper-like) */
+  --shadow-sm: 0 1px 2px 0 rgba(28, 38, 33, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(28, 38, 33, 0.06), 0 2px 4px -2px rgba(28, 38, 33, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(28, 38, 33, 0.07), 0 4px 6px -4px rgba(28, 38, 33, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(28, 38, 33, 0.08), 0 8px 10px -6px rgba(28, 38, 33, 0.04);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 9px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout Dimensions */
+  --sidebar-width: 265px;
+  --header-height: 72px;
+}
+
+/* ==========================================================================
+   Dark Mode Theme (Modern Sleek Indigo & Deep Slate Tech)
+   ========================================================================== */
+[data-theme="dark"] {
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+
+  --bg-app: #0B0F19;
+  --bg-surface: #111827;
+  --bg-surface-elevated: #1F2937;
+  --bg-surface-muted: #1E293B;
+  --border-subtle: #1F2937;
+  --border-strong: #374151;
+  --border-ledger-dashed: 1px dashed #374151;
+
+  --bg-input: #1F2937;
+  --border-input: #374151;
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-inverse: #0B0F19;
+
+  --primary-50: #1E1B4B;
+  --primary-100: #312E81;
+  --primary-200: #3730A3;
+  --primary-500: #6366F1;
+  --primary-600: #4F46E5;
+  --primary-700: #4338CA;
+  --primary-gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  --primary-light-gradient: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+
+  --color-success: #10B981;
+  --color-success-bg: rgba(16, 185, 129, 0.12);
+  --color-success-border: rgba(16, 185, 129, 0.25);
+
+  --color-warning: #F59E0B;
+  --color-warning-bg: rgba(245, 158, 11, 0.12);
+  --color-warning-border: rgba(245, 158, 11, 0.25);
+
+  --color-info: #0284C7;
+  --color-info-bg: rgba(2, 132, 199, 0.12);
+  --color-info-border: rgba(2, 132, 199, 0.25);
+
+  --color-danger: #EF4444;
+  --color-danger-bg: rgba(239, 68, 68, 0.12);
+  --color-danger-border: rgba(239, 68, 68, 0.25);
+
+  --priority-urgent: #EF4444;
+  --priority-urgent-bg: rgba(239, 68, 68, 0.15);
+  --priority-high: #F97316;
+  --priority-high-bg: rgba(249, 115, 22, 0.15);
+  --priority-medium: #F59E0B;
+  --priority-medium-bg: rgba(245, 158, 11, 0.15);
+  --priority-low: #94A3B8;
+  --priority-low-bg: rgba(148, 163, 184, 0.15);
+}
+
+/* Modern CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  /* Dot grid texture in light mode matching the paper ledger */
+  background-image: radial-gradient(var(--border-subtle) 0.8px, transparent 0.8px);
+  background-size: 18px 18px;
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+[data-theme="dark"] body {
+  background-image: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.mono-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  transition: all var(--transition-fast);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+img, svg {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
